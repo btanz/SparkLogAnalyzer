@@ -1,11 +1,13 @@
 # Spark Log Analyzer
 ## 1 Introduction
 Spark Log Analyzer is a tool for the analysis of large Apache log files using Spark. 
-Inputs of the tool are a Spark execution context (such as 'local'), the location of the log file to analyze and a regex matching pattern that splits a single line in the logfile into its attributes.
+Inputs of the tool are a Spark execution context (such as 'local'), the location of the log file to analyze and a regex matching pattern that splits a single line of the log file into its attributes.
+
 This project is work in progress.
 
 ## 2 Example
-The file example.py contains a script that analyzes a large public domain Apache log file from NASA.
+The file example.py contains a script that analyzes a large public domain Apache log file from NASA. To run this file, please make
+sure the log file is available at the location specified in FILE_LOC. Then submit the file using spark-submit example.py
   
 ```python
 import spark_log_analyzer as sla
@@ -30,9 +32,14 @@ logAnalyze.close()
 ```
 
 The output of this script contains various statistics:
+
 CONTENT BYTE SIZE STATISTICS 
+
 Total content size (bytes): 38464606624
+
 Minimal content size (bytes): 0
+
 Maximal content size (bytes): 6823936
+
 Average content size per response (bytes): 20333 
 
