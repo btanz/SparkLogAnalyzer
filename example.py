@@ -9,6 +9,7 @@ The example expects the file at the location defined in FILE_LOC in the local fi
 file is converted to an RDD and distributed.
 
 """
+
 import spark_log_analyzer as sla
 
 # 1) Configure script variables
